@@ -691,9 +691,7 @@ static void RDoSQLQ(void) {
 
 static void RDoTriangle(void) {
 	int32 V;
-	int32 tcout, cout;
-
-	tcout = (tristep & 0xF);
+	int32 tcout = (tristep & 0xF);
 	if (!(tristep & 0x10)) tcout ^= 0xF;
 	tcout = (tcout * 3) << 16;	/* (tcout<<1); */
 
@@ -1007,9 +1005,7 @@ int FlushEmulateSound(void) {
 	}
 	inbuf = end;
 
-	/* FCEU_WriteWaveData(WaveFinal, end);	 This function will just return
-										if sound recording is off. */
-	return(end);
+	return end;
 }
 
 int GetSoundBuffer(int32 **W) {

@@ -301,7 +301,6 @@ endlseq:
    }
 
    FCEU_ResetPalette();
-   FCEU_ResetMessages();	/* Save state, status messages, etc. */
 
    return(GameInfo);
 }
@@ -520,11 +519,6 @@ int FCEUI_GetCurrentVidSystem(int *slstart, int *slend)
 void FCEUI_SetGameGenie(int a)
 {
 	FSettings.GameGenie = a ? 1 : 0;
-}
-
-void FCEUI_SetSnapName(int a)
-{
-	FSettings.SnapName = a;
 }
 
 int32 FCEUI_GetDesiredFPS(void)
